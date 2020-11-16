@@ -145,7 +145,7 @@ db.futbolistaspremierleague.insertMany([
      ]);
      db.futbolistaspremierleague.find() //Para que me muestre que todos los valores introducidos están bien.
      db.futbolistaspremierleague.find({$or:[{"posiciones preferidas":"DC"},{"posiciones preferidas":"EI"}]}) //Find para que me de los jugadores que pueden jugar en las posiciones de EI(Extremo Izquierdo) o DC(Delantero Centro)
-     db.futbolistaspremierleague.find( { "pie preferido":{ $ne: "izquierdo" }, "valor de mercado": { $lte: 40000000 } } ) //Find para que me de los que tienen motor que no es de gasolina y de menos de 1300cc
+     db.futbolistaspremierleague.find( { "pie preferido":{ $ne: "izquierdo" }, "valor de mercado": { $lte: 40000000 } } ) //Find que no son zurdos y su valor de mercado es menor o igual a 40M€
      db.futbolistaspremierleague.find({"equipos": {$eq: "Manchester City" }})//Find que da los jugadores que han jugado o juegan en el Manchester City
      db.futbolistaspremierleague.find( { "edad":{ $gt:25  }, "edad": { $lt: 29 } } )//Find que da los jugadores que están entre los 25 y 30 años
      db.futbolistaspremierleague.find( { "pie preferido": null } ) //Find para los valores de peso que son nulos
