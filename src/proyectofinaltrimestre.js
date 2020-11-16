@@ -167,4 +167,5 @@ db.futbolistaspremierleague.insertMany([
      db.futbolistaspremierleague.find({$nor:[{"posiciones preferidas":"ED"},{"posiciones preferidas":"MCO"}]})
      //Find con jugadores con valor de mercado menor a 30M€ y de las Islas Británicas.
      db.futbolistaspremierleague.find({ $and: [ { "valor de mercado": { $lte: 30000000 } },{$or:[{"país":"Escocia"},{"país":"Inglaterra"},{"país":"Gales"}]}  ] } )
+     //Find que me da los jugadores con 3 posiciones preferidas
      db.futbolistaspremierleague.find( { "posiciones preferidas": { $size: 3 } } )
